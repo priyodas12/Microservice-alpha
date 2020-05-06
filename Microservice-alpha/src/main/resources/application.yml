@@ -7,3 +7,11 @@ spring:
   output:
     ansi:
       enabled: always
+
+#actuator end points enable
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
