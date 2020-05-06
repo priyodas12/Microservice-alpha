@@ -1,0 +1,9 @@
+#tomcat details.
+server:
+  port: 9292
+
+# enable ansi output
+spring:
+  output:
+    ansi:
+      enabled: always
