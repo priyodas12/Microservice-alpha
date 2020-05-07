@@ -14,7 +14,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update  #create-will remain even also server shut-down,create-drop-will remove the db once server restart done.
+      ddl-auto: update  #create-table will remain even also server shut-down,create-drop-will remove the db table once server restart done.Update-will remain with field data
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
