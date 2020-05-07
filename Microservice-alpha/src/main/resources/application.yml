@@ -8,13 +8,13 @@ spring:
     ansi:
       enabled: always
   datasource:
-    url: jdbc:mysql://localhost:3306/springsecurity
+    url: jdbc:mysql://localhost:3306/malpha?createDatabaseIfNotExist=true
     username: root
     password: Priyo123
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: update  #create-will remain even also server shut-down,create-drop-will remove the db once server restart done.
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
