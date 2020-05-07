@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class PFAccountServiceImpl implements PFAccountService{
 
@@ -19,5 +21,11 @@ public class PFAccountServiceImpl implements PFAccountService{
     public PFAccount saveDetails(PFAccount pfAccount) {
         log.info("saveDetails() executed...{}",pfAccount.getId());
         return pfAccountRepository.save(pfAccount);
+    }
+    //to avoid Optional null pointer exception
+    public PFAccount fetchRecordByID(int id){
+        Optional<PFAccount> pfa=pfAccountRepository.findById(id);
+        if(pfa.isPresent()) return pfa.get();
+        else return null;
     }
 }
