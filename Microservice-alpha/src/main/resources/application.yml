@@ -2,6 +2,7 @@
 server:
   port: 9292
 
+
 # enable ansi output
 spring:
   output:
@@ -25,5 +26,9 @@ management:
       exposure:
         include:
           - '*'
+#logging level
+logging:
+  level:
+    org.springframework=DEBUG
 
 
