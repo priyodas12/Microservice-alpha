@@ -7,6 +7,16 @@ spring:
   output:
     ansi:
       enabled: always
+  datasource:
+    url: jdbc:mysql://localhost:3306/springsecurity
+    username: root
+    password: Priyo123
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
 #actuator end points enable
 management:
@@ -15,3 +25,5 @@ management:
       exposure:
         include:
           - '*'
+
+

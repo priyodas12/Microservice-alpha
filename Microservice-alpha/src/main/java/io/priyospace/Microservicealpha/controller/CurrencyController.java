@@ -21,6 +21,7 @@ public class CurrencyController {
     public Map<String,Currency> getCurrencyDetails(){
         return currencyList;
     }
+
     @ReadOperation
     public Currency getCurrency(@Selector String type) {
         return currencyList.get(type);
