@@ -11,7 +11,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/malpha?createDatabaseIfNotExist=true
     username: root
-    password: Priyo123
+    password: PriyoXXXXX
     driver-class-name: com.mysql.jdbc.Driver
   jpa:
     hibernate:
